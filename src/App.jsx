@@ -1,8 +1,6 @@
-import Card from "./components/Card/Card"
-
+import Card from "./components/Card/Card";
 
 function App() {
-
   const userInfo = [
     {
       id: 1,
@@ -13,12 +11,12 @@ function App() {
       user: {
         avatar:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png",
-        name: "John Doe"
+        name: "John Doe",
       },
       rating: 4.5,
       students: 1234,
       modules: 5,
-      duration: 5400
+      duration: 5400,
     },
     {
       id: 2,
@@ -29,32 +27,26 @@ function App() {
       user: {
         avatar:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png",
-        name: "John Doe"
+        name: "John Doe",
       },
       rating: 4.5,
       students: 1234,
       modules: 5,
       finishedModules: 3,
       duration: 5400,
-      isMyCource: true
-    }
+      isMyCource: true,
+    },
   ];
-  
-
 
   return (
     <>
+      <div>Hello World</div>
 
-     <div>
-     Hello World
-     </div>
-
-     {userInfo.map(card => <div key={card.id}> <Card info={card}/> </div>)}
-     
-
-
+      {userInfo.map((card) => (
+        <Card info={card} key={card.id} />
+      ))}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
